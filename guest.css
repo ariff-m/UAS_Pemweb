@@ -1,0 +1,81 @@
+:root {
+  --pr: #617a55;
+  --sec: #f7e1ae;
+  --trd: #c07f00;
+  --alt: #fff7d4;
+}
+
+nav {
+  background-color: var(--pr);
+  font-weight: 700;
+  border-bottom: 1px black solid;
+}
+
+.navbar-brand {
+  color: var(--sec);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  color: var(--sec);
+}
+
+/* HOME */
+.home {
+  min-height: 100vh;
+  padding-top: 6rem;
+}
+
+.home .banner {
+  border-radius: 20px;
+}
+
+.home .banner .tales {
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.home .isi {
+  padding-top: 3rem;
+}
+
+.home .isi h1 {
+  font-weight: 700;
+  color: var(--pr);
+  margin-bottom: 2rem;
+}
+
+.hal2 {
+  min-height: 100vh;
+  padding-top: 5rem;
+  text-align: center;
+}
+
+.hal2 h2 {
+  font-weight: 700;
+  color: var(--pr);
+  margin-bottom: 1rem;
+}
+
+.hal2 p {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.hal2 .kartu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+
+footer {
+    background-color: var(--pr);
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: center;
+    color: var(--alt);
+}
