@@ -1,0 +1,46 @@
+:root {
+  --pr: #617a55;
+  --sec: #f7e1ae;
+  --trd: #c07f00;
+  --alt: #fff7d4;
+}
+
+nav {
+  background-color: var(--pr);
+  font-weight: 700;
+  border-bottom: 2px black solid;
+  color: var(--alt);
+}
+
+.navbar-brand {
+  color: var(--sec);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.navbar-brand {
+  color: var(--sec);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  color: var(--sec);
+}
+
+.login {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login .kotak {
+  width: 30rem;
+  border: 2px var(--sec) solid;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+  border-radius: 10px;
+  background-color: var(--alt);
+}
