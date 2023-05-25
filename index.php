@@ -9,7 +9,7 @@ if (!isset($_SESSION['login'])) {
 
 require_once 'functions.php';
 
-$query = "SELECT * FROM mahasiswa";
+$query = "SELECT * FROM kartu";
 
 $result = mysqli_query($conn, $query);
 ?>
@@ -82,63 +82,34 @@ $result = mysqli_query($conn, $query);
 
   <div class="hal2 container">
     <h2>UKM</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis at assumenda ut mollitia laborum animi deserunt magnam voluptates veniam impedit eum doloremque, repudiandae dolorum commodi aspernatur fugit sit voluptatibus unde voluptatum alias provident culpa quae, ipsum distinctio. Dolorem saepe aperiam et quam necessitatibus doloremque tenetur dignissimos, numquam vero, nobis illo?</p>
+    <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis at assumenda ut mollitia laborum animi deserunt magnam voluptates veniam impedit eum doloremque, repudiandae dolorum commodi aspernatur fugit sit voluptatibus unde voluptatum alias provident culpa quae, ipsum distinctio. Dolorem saepe aperiam et quam necessitatibus doloremque tenetur dignissimos, numquam vero, nobis illo?</p>
     <div class="kartu">
-      <div class="card" style="width: 18rem;">
-        <img src="src/or.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="src/or.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="src/or.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="src/or.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="src/or.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="src/or.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="src/or.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="src/or.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
 
+      <?php
+      if (mysqli_num_rows($result) > 0) {
+        $no = 1;
+        while ($row = mysqli_fetch_assoc($result)) {
+      ?>
+          <div class="card" style="width: 15rem;">
+            <img src="uploads/<?php echo $row['img']; ?>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5><?php echo $row['ukm']; ?></h5>
+              <p class="card-text"><?php echo $row['text'] ?></p>
+              <p>Total Mahasiswa : <?php echo $row['total'] ?></p>
+              <a href="" class="sosmed text-decoration-none btn"><i class="bi bi-instagram"></i> Instagram</a>
+            </div>
+          </div>
+
+      <?php
+        }
+      }
+      ?>
+    </div>
+
+  </div>
 
   <footer>
-    <p>&copy 2023 | kelompok</p>
+    <p>&copy 2023 | Kelompok 4</p>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
