@@ -30,11 +30,11 @@ require_once 'functions.php';
                 <tr>
                     <td>
                         <div class="mb-3">
-                            <label for="nama" class="form-label">NAMA UKM</label>
+                            <label for="nama" class="form-label">Nama UKM</label>
                             <input type="text" class="form-control" id="ukm" name="ukm" required />
                         </div>
                         <div class="mb-3">
-                            <label for="npm" class="form-label">DESKRIPSI</label>
+                            <label for="npm" class="form-label">Deskripsi</label>
                             <textarea class="form-control" name="desk" id="desk" rows="5"></textarea>
                         </div>
                     </td>
