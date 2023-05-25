@@ -50,7 +50,7 @@ require_once 'functions.php';
                     </td>
                 </tr>
             </table>
-            <a href="index.php" class="btn btn-secondary">CENCEL</a>
+            <a href="index.php" class="btn btn-secondary">CANCEL</a>
             <button class="btn btn-primary" type="submit" value="ukmADD" name="proses">SUBMIT</button>
         </form>
     </div>
