@@ -30,17 +30,23 @@ $result = mysqli_query($conn, $query);
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#home">UKM UPNVJT</a>
+            <a class="navbar-brand" href="index.php">UKM UPNVJT</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link" aria-current="page" href="index.php">Home</a>
-                    <a class="nav-link" href="form.php">Form</a>
                     <a class="nav-link" href="data.php">Data</a>
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Form</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="form.php">Tambah Mahasiswa</a></li>
+                            <li><a class="dropdown-item" href="form2.php">Tambah UKM</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="navbar-nav">
                     <a class="nav-link" href="logout.php">Logout</a>
@@ -50,11 +56,10 @@ $result = mysqli_query($conn, $query);
     </nav>
 
     <div class="data container">
-        <h2>
-            DATA UKM MAHASISWA <br />
+        <h2 class="mb-5">
+            DATA MAHASISWA YANG MENGIKUTI UKM<br />
             UPN "VETERAN" JAWA TIMUR
         </h2>
-        <a href="form.php" type="button" class="btn btn-primary">ADD DATA</a>
         <table class="table mt-2 text-center border" id="data-table">
             <thead class="table-dark">
                 <tr>
@@ -100,6 +105,8 @@ $result = mysqli_query($conn, $query);
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap5.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
     <script>
         $(document).ready(function() {

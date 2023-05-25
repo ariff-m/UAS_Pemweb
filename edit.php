@@ -26,6 +26,9 @@ if (isset($_GET['id'])) {
         $sp = $data['sp'];
     }
 }
+
+$query2 = "SELECT ukm FROM kartu";
+$result2 = mysqli_query($conn, $query2);
 ?>
 
 
@@ -59,7 +62,7 @@ if (isset($_GET['id'])) {
             </div>
         </div>
     </nav>
-    
+
     <div class="form mt-3 container">
         <h2>UBAH DATA ANDA</h2>
         <form action="functions.php" method="post" class="mt-3" enctype="multipart/form-data">
@@ -101,9 +104,16 @@ if (isset($_GET['id'])) {
                             <label for="ukm" class="form-label">PILIHAN UKM</label>
                             <select id="ukm" name="ukm" class="form-select" required>
                                 <option value="" disabled selected></option>
-                                <option value="Bola Voli" <?php if ($data['ukm'] == 'Bola Voli') { ?> selected <?php } ?>>Bola Voli</option>
-                                <option value="Bola Basket" <?php if ($data['ukm'] == 'Bola Basket') { ?> selected <?php } ?>>Bola Basket</option>
-                                <option value="Bola Futsal" <?php if ($data['ukm'] == 'Bola Futsal') { ?> selected <?php } ?>>Bola Futsal</option>
+                                <?php
+                                if (mysqli_num_rows($result2) > 0) {
+                                    $no = 1;
+                                    while ($row = mysqli_fetch_assoc($result2)) {
+                                ?>
+                                        <option value="<?php echo $row['ukm'] ?>" <?php if ($data['ukm'] == $row['ukm']) { ?> selected <?php } ?>><?php echo $row['ukm'] ?></option>
+                                <?php
+                                    }
+                                }
+                                ?>
                             </select>
                         </div>
                         <div class="mb-3">
@@ -112,7 +122,8 @@ if (isset($_GET['id'])) {
                             <input class="form-control" type="file" id="ktm" name="ktm" accept=".pdf" value="<?= $ktm ?>" />
                         </div>
                         <div class="mb-3">
-                            <label for="sp" class="form-label">SURAT PENDAFTARAN</label>
+                            <img src="uploads/<?= $data['sp'] ?>" width="100px"><br>
+                            <label for="sp" class="form-label">FOTO</label>
                             <input type="hidden" name="sp" value="<?= $sp ?>">
                             <input class="form-control" type="file" id="sp" name="sp" accept=".pdf" value="<?= $sp ?>" />
                         </div>

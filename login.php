@@ -51,6 +51,7 @@ if (isset($_POST['login'])) {
       <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link" aria-current="page" href="guest.php">Home</a>
+          <a class="nav-link" href="guest.php#ukm">List</a>
           <a class="nav-link" href="form.php">Form</a>
         </div>
         <div class="navbar-nav">
@@ -62,7 +63,7 @@ if (isset($_POST['login'])) {
 
   <div class="login">
     <form class="kotak" action="" method="post">
-      <h3 class="fw-bold mb-4 fs-2 text-center">ADMIN</h3>
+      <h3 class="fw-bold mb-4 fs-2 text-center">LOGIN FOR ADMIN</h3>
       <div class="mb-3">
         <input type="text" class="form-control" name="username" placeholder="username" required />
       </div>

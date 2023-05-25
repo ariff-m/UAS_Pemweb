@@ -1,5 +1,9 @@
 <?php
 require_once 'functions.php';
+
+$query = "SELECT ukm FROM kartu";
+
+$result = mysqli_query($conn, $query);
 ?>
 
 <!DOCTYPE html>
@@ -72,25 +76,25 @@ require_once 'functions.php';
               <label for="ukm" class="form-label">PILIHAN UKM</label>
               <select id="ukm" name="ukm" class="form-select" required>
                 <option value="" disabled selected></option>
-                <option value="Bola Voli">Bola Voli</option>
-                <option value="Bola Basket">Bola Basket</option>
-                <option value="Futsal">Futsal</option>
-                <option value="Sepak Bola">Sepak Bola</option>
-                <option value="Pramuka">Pramuka</option>
-                <option value="Mapala">Mapala</option>
-                <option value="Tari">Tari</option>
-                <option value="Musik">Musik</option>
-                <option value="Paduan Suara">Paduan Suara</option>
-                <option value="Renang">Renang</option>
+                <?php
+                if (mysqli_num_rows($result) > 0) {
+                  $no = 1;
+                  while ($row = mysqli_fetch_assoc($result)) {
+                ?>
+                    <option value="<?php echo $row['ukm'] ?>"><?php echo $row['ukm'] ?></option>
+                <?php
+                  }
+                }
+                ?>
               </select>
-            </div>
-            <div class="mb-3">
-              <label for="ktm" class="form-label">KTM</label>
-              <input class="form-control" type="file" id="ktm" name="ktm" accept=".pdf" required />
             </div>
             <div class="mb-3">
               <label for="sp" class="form-label">FOTO</label>
               <input class="form-control" type="file" id="sp" name="sp" accept=".img, .jpeg, .png ,.jpg" required />
+            </div>
+            <div class="mb-3">
+              <label for="sp" class="form-label">ktm</label>
+              <input class="form-control" type="file" id="ktm" name="ktm" accept=".img, .jpeg, .png ,.jpg" required />
             </div>
           </td>
         </tr>

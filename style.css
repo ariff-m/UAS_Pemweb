@@ -109,3 +109,12 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
+/* DETAIL */
+
+.detail {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -33,6 +33,7 @@ $result = mysqli_query($conn, $query);
             <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link" aria-current="page" href="#home">Home</a>
+                    <a class="nav-link" href="#ukm">List</a>
                     <a class="nav-link" href="form.php">Form</a>
                 </div>
                 <div class="navbar-nav">
@@ -72,9 +73,9 @@ $result = mysqli_query($conn, $query);
         </div>
     </div>
 
-    <div class="hal2 container">
+    <div class="hal2 container" id="ukm">
         <h2>UKM</h2>
-        <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis at assumenda ut mollitia laborum animi deserunt magnam voluptates veniam impedit eum doloremque, repudiandae dolorum commodi aspernatur fugit sit voluptatibus unde voluptatum alias provident culpa quae, ipsum distinctio. Dolorem saepe aperiam et quam necessitatibus doloremque tenetur dignissimos, numquam vero, nobis illo?</p>
+        <p class="p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae laborum alias dolorem, sequi nam in odit, aspernatur quibusdam repellendus soluta impedit adipisci non commodi omnis quam iure fuga expedita. Nihil?</p>
         <div class="kartu">
 
             <?php
@@ -83,12 +84,12 @@ $result = mysqli_query($conn, $query);
                 while ($row = mysqli_fetch_assoc($result)) {
             ?>
                     <div class="card" style="width: 15rem;">
-                        <img src="uploads/<?php echo $row['img']; ?>" class="card-img-top" alt="...">
+                        <img src="uploads/<?php echo $row['img']; ?>" class="card-img-top">
                         <div class="card-body">
                             <h5><?php echo $row['ukm']; ?></h5>
-                            <p class="card-text"><?php echo $row['text'] ?></p>
+                            <p class="card-text"><?php echo $row['desk'] ?></p>
                             <p>Total Mahasiswa : <?php echo $row['total'] ?></p>
-                            <a href="" class="sosmed text-decoration-none btn"><i class="bi bi-instagram"></i> Instagram</a>
+                            <a href="<?php echo $row['instagram'] ?>" class="sosmed text-decoration-none btn" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
                         </div>
                     </div>
 

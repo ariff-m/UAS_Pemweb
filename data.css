@@ -29,18 +29,18 @@ nav {
 }
 
 .data {
-    margin-top: 5rem;
-    min-height: 100vh;
+  padding-top: 10rem;
+  min-height: 100vh;
 }
 
 .data h2 {
-    text-align: center;
+  text-align: center;
 }
 
 footer {
-    background-color: var(--pr);
-    margin-top: 2rem;
-    padding: 1rem;
-    text-align: center;
-    color: var(--alt);
+  background-color: var(--pr);
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+  color: var(--alt);
 }
