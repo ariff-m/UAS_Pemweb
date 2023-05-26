@@ -70,7 +70,7 @@ if (isset($_GET['id'])) {
                         <div class="mb-3">
                             <img src="uploads/<?= $data['img'] ?>" width="150px"><br>
                             <label for="img" class="form-label">Logo UKM</label>
-                            <input type="hidden" name="img" value="<?= $data['img'] ?>">
+                            <input type="hidden" name="img" id="img" value="<?= $data['img'] ?>">
                             <input class="form-control" type="file" id="img" name="img" accept=".img, .jpeg, .png ,.jpg" />
                         </div>
                     </td>

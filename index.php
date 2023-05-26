@@ -70,7 +70,7 @@ $result = mysqli_query($conn, $query);
             <div class="card-body">
               <h5><?php echo $row['ukm']; ?></h5>
               <p class="card-text"><?php echo $row['desk'] ?></p>
-              <p>Total Mahasiswa : <?php echo $row['total'] ?></p>
+              <p class="fw-semibold">Total Mahasiswa : <?php echo $row['total'] ?></p>
               <a href="<?php echo $row['instagram'] ?>" class="sosmed text-decoration-none btn" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
               <hr>
               <div>

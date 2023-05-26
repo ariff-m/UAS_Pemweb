@@ -92,10 +92,6 @@ $result = mysqli_query($conn, $query);
               <label for="sp" class="form-label">FOTO</label>
               <input class="form-control" type="file" id="sp" name="sp" accept=".img, .jpeg, .png ,.jpg" required />
             </div>
-            <div class="mb-3">
-              <label for="sp" class="form-label">ktm</label>
-              <input class="form-control" type="file" id="ktm" name="ktm" accept=".img, .jpeg, .png ,.jpg" required />
-            </div>
           </td>
         </tr>
       </table>

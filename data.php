@@ -66,8 +66,9 @@ $result = mysqli_query($conn, $query);
                     <th>No.</th>
                     <th>NPM</th>
                     <th>NAMA</th>
-                    <th>UKM</th>
+                    <th>JURUSAN</th>
                     <th>GENDER</th>
+                    <th>UKM</th>
                     <th></th>
                 </tr>
             </thead>
@@ -81,8 +82,9 @@ $result = mysqli_query($conn, $query);
                             <td><?php echo $no++; ?></td>
                             <td><?php echo $row['npm']; ?></td>
                             <td><?php echo $row['nama']; ?></td>
-                            <td><?php echo $row['ukm']; ?></td>
+                            <td><?php echo $row['jur']; ?></td>
                             <td><?php echo $row['jk']; ?></td>
+                            <td><?php echo $row['ukm']; ?></td>
                             <td>
                                 <a type="button" class="btn btn-warning" href="detail.php?id=<?= $row['id'] ?>">DETAIL</a> |
                                 <a type="button" class="btn btn-success" href="edit.php?id=<?= $row['id'] ?>">EDIT</a> |

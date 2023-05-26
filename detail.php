@@ -75,7 +75,7 @@ if (isset($_GET['id'])) {
                 <td>
                     <img src="uploads/<?= $sp ?>" width="200px">
                 </td>
-                <td style="width: 80%;">
+                <td style="width:80%;">
                     <p>Nama : <?= $nama ?></p>
                     <p>Jenis Kelamin : <?= $jk ?></p>
                     <p>NPM : <?= $npm ?></p>
