@@ -37,7 +37,7 @@ nav {
 }
 
 .home .banner .tales {
-  width: 100%;  
+  width: 100%;
   border-radius: 20px;
 }
 
@@ -106,7 +106,11 @@ footer {
   background-color: var(--pr);
   margin-top: 2rem;
   color: var(--alt);
-  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 1px;
   align-items: center;
+}
+footer .copy {
+  display: flex;
   justify-content: center;
 }
