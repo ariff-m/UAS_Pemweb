@@ -89,7 +89,7 @@ $result = mysqli_query($conn, $query);
 
     <div class="hal2 container" id="ukm">
         <h2>Unit Kegiatan Mahasiswa</h2>
-        <p class="p">Berikut ini adalah beberapa unit kegiatan mahasiswa yang dapat Anda ikuti:</p>
+        <p class="p">Berikut ini adalah beberapa unit kegiatan mahasiswa yang dapat Anda ikuti :</p>
 
         <div class="kartu">
 
