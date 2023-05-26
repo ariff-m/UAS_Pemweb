@@ -107,6 +107,7 @@ nav {
 }
 
 footer {
+  border-top: 1px black solid;
   background-color: var(--pr);
   margin-top: 2rem;
   color: var(--alt);
