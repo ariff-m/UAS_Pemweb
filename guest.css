@@ -52,6 +52,11 @@ nav {
   margin-bottom: 2rem;
 }
 
+.home .isi p {
+  text-align: justify;
+  width: 80%;
+}
+
 .hal2 {
   min-height: 100vh;
   padding-top: 5rem;

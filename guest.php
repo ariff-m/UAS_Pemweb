@@ -35,8 +35,8 @@ $result = mysqli_query($conn, $query);
             <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link" aria-current="page" href="#home">Home</a>
-                    <a class="nav-link" href="#ukm">List</a>
-                    <a class="nav-link" href="form.php">Form</a>
+                    <a class="nav-link" href="#ukm">Temukan UKM</a>
+                    <a class="nav-link" href="form.php">Daftar UKM</a>
                 </div>
                 <div class="navbar-nav">
                     <a class="nav-link" href="login.php">Login</a>
@@ -78,7 +78,7 @@ $result = mysqli_query($conn, $query);
                 universitas yang memiliki minat atau hobi yang sama. UKM menyediakan platform bagi mahasiswa untuk
                 mengembangkan diri di luar lingkup akademik dan berpartisipasi dalam kegiatan yang sesuai dengan minat
                 dan
-                bakat mereka..</p>
+                bakat mereka.</p>
             <p>Dengan ikut serta dalam UKM, mahasiswa memiliki kesempatan untuk memperluas relasi, mengeksplorasi
                 minat
                 dan bakat mereka, dan mendapatkan pengalaman yang dapat berguna dalam pengembangan karier mereka di
