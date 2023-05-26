@@ -38,7 +38,6 @@ nav {
 
 .home .banner .tales {
   width: 100%;
-  height: 300px;
   border-radius: 20px;
 }
 
@@ -54,6 +53,11 @@ nav {
 
 .home .isi p {
   width: 90%;
+}
+
+.home .isi p {
+  text-align: justify;
+  width: 80%;
 }
 
 .hal2 {
@@ -106,7 +110,11 @@ footer {
   background-color: var(--pr);
   margin-top: 2rem;
   color: var(--alt);
-  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 1px;
   align-items: center;
+}
+footer .copy {
+  display: flex;
   justify-content: center;
 }

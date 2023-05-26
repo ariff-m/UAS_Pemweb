@@ -38,10 +38,10 @@ $result = mysqli_query($conn, $query);
       </button>
       <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link" aria-current="page" href="index.php">Home</a>
-          <a class="nav-link" href="data.php">Data</a>
+          <a class="nav-link" aria-current="page" href="index.php">Data UKM</a>
+          <a class="nav-link" href="data.php">Data Mahasiswa</a>
           <div class="dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Form</a>
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Fomulir</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="form.php">Tambah Mahasiswa</a></li>
               <li><a class="dropdown-item" href="form2.php">Tambah UKM</a></li>
