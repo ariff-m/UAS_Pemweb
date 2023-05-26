@@ -8,7 +8,7 @@
 nav {
   background-color: var(--pr);
   font-weight: 700;
-  border-bottom: 2px black solid;
+  border-bottom: 1px black solid;
   color: var(--alt);
 }
 
@@ -22,6 +22,10 @@ nav {
   color: var(--sec);
   font-weight: 700;
   font-size: 1.5rem;
+}
+
+.navbar-brand:hover {
+  color: var(--sec);
 }
 
 .navbar-nav .nav-link {
