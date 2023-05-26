@@ -95,7 +95,7 @@ $result = mysqli_query($conn, $query);
           </td>
         </tr>
       </table>
-      <a href="index.php" class="btn btn-secondary">CENCEL</a>
+      <a href="index.php" class="btn btn-secondary">CANCEL</a>
       <button class="btn btn-primary" type="submit" value="submit" name="proses">SUBMIT</button>
     </form>
   </div>

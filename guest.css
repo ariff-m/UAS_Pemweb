@@ -3,7 +3,6 @@
   padding: 0;
 }
 
-
 :root {
   --pr: #617a55;
   --sec: #f7e1ae;
@@ -73,7 +72,6 @@ nav {
   text-align: center;
   margin-bottom: 3rem;
   width: 80%;
-  
 }
 
 .hal2 .kartu {
@@ -84,28 +82,27 @@ nav {
 }
 
 .hal2 .kartu .card {
-  box-shadow: rgb(0, 0, 0, 30%) 1px 1px 3px ;
+  box-shadow: rgb(0, 0, 0, 30%) 1px 1px 3px;
 }
 
-.hal2 .kartu .card .card-body{
+.hal2 .kartu .card .card-body {
   text-align: left;
 }
 
-.hal2 .kartu .card .card-body .sosmed{
+.hal2 .kartu .card .card-body .sosmed {
   color: white;
   background-color: var(--pr);
 }
 
 .hal2 .kartu p {
-  text-align: justify;
+  text-align: left;
 }
 
-
 footer {
-    background-color: var(--pr);
-    margin-top: 2rem;
-    color: var(--alt);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: var(--pr);
+  margin-top: 2rem;
+  color: var(--alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
