@@ -48,3 +48,6 @@ nav {
   border-radius: 10px;
   background-color: var(--alt);
 }
+.login h3 {
+  color: var(--pr);
+}
