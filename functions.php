@@ -28,10 +28,9 @@ function hapus()
     $id = $_GET['id'];
 
     // Mengambil data file yang akan dihapus
-    $query = "SELECT ktm, sp FROM mahasiswa WHERE id = '$id'";
+    $query = "SELECT sp FROM mahasiswa WHERE id = '$id'";
     $result = mysqli_query($conn, $query);
     $data = mysqli_fetch_assoc($result);
-    $ktm = $data['ktm'];
     $sp = $data['sp'];
 
     // Menghapus data dari tabel
@@ -40,9 +39,6 @@ function hapus()
 
     if ($eksekusi) {
         // Menghapus file dari direktori
-        if ($ktm !== "null") {
-            unlink('uploads/' . $ktm);
-        }
         if ($sp !== "null") {
             unlink('uploads/' . $sp);
         }
@@ -70,23 +66,8 @@ function tambah()
     $wa = $_POST['wa'];
     $ukm = $_POST['ukm'];
 
-    $ktm_tmp = $_FILES['ktm'];
     $sp_tmp = $_FILES['sp'];
 
-    // Menentukan nama file PDF yang baru
-    $ktm = uniqid() . '.' . pathinfo($ktm_tmp['name'], PATHINFO_EXTENSION);
-
-    // Memindahkan $ktm_tmp PDF yang diunggah ke direktori yang ditentukan
-    if ($ktm_tmp['error'] == 4) {
-        $ktm = "null";
-    } else {
-        if (!move_uploaded_file($ktm_tmp['tmp_name'], 'uploads/' . $ktm)) {
-            echo "<script>
-            alert('File KTM tidak bisa di masukkan.');
-        </script>";
-            return 0;
-        }
-    }
 
     // Menentukan nama file PDF yang baru
     $sp = uniqid() . '.' . pathinfo($sp_tmp['name'], PATHINFO_EXTENSION);
@@ -105,7 +86,7 @@ function tambah()
 
 
 
-    $query = "INSERT INTO mahasiswa (nama, jk, npm, fak, jur, wa, ukm, ktm, sp) VALUES ('$nama', '$jk', '$npm', '$fak','$jur','$wa','$ukm','$ktm','$sp')";
+    $query = "INSERT INTO mahasiswa (nama, jk, npm, fak, jur, wa, ukm, sp) VALUES ('$nama', '$jk', '$npm', '$fak','$jur','$wa','$ukm','$sp')";
     $eksekusi = mysqli_query($conn, $query);
 
     if ($eksekusi) {
@@ -135,24 +116,9 @@ function edit()
     $wa = $_POST['wa'];
     $ukm = $_POST['ukm'];
 
-    $ktm_tmp = $_POST['ktm'];
     $sp_tmp = $_POST['sp'];
 
-    if ($_FILES['ktm']['error'] === 4) {
-        $ktm = $ktm_tmp;
-    } else {
-        $ktm = uniqid() . '.' . pathinfo($_FILES['ktm']['name'], PATHINFO_EXTENSION);
-        if (!move_uploaded_file($_FILES['ktm']['tmp_name'], 'uploads/' . $ktm)) {
-            echo "<script>
-                alert('MEDICAL FILE COULD NOT BE UPLOADED!');
-            </script>";
-            return 0;
-        }
-        if ($ktm_tmp !== 'null') {
-            unlink('uploads/' . $ktm_tmp);
-        }
-    }
-    
+
     if ($_FILES['sp']['error'] === 4) {
         $sp = $sp_tmp;
     } else {
@@ -169,7 +135,7 @@ function edit()
     }
 
 
-    $query = "UPDATE mahasiswa SET nama = '$nama', jk = '$jk', npm = '$npm', fak = '$fak', jur = '$jur', wa = '$wa', ukm = '$ukm', ktm = '$ktm', sp = '$sp' WHERE id = '$id'";
+    $query = "UPDATE mahasiswa SET nama = '$nama', jk = '$jk', npm = '$npm', fak = '$fak', jur = '$jur', wa = '$wa', ukm = '$ukm', sp = '$sp' WHERE id = '$id'";
     $eksekusi = mysqli_query($conn, $query);
 
     if ($eksekusi) {
@@ -269,8 +235,8 @@ function ukmEDIT()
     $ukm = $_POST['ukm'];
     $desk = $_POST['desk'];
     $instagram = $_POST['instagram'];
+    $img_tmp = $_POST['img'];
 
-    $img_tmp = $_FILES['img'];
 
     if ($_FILES['img']['error'] === 4) {
         $img = $img_tmp;
@@ -303,7 +269,3 @@ function ukmEDIT()
         </script>';
     }
 }
-
-
-
-

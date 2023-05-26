@@ -22,7 +22,6 @@ if (isset($_GET['id'])) {
         $jur = $data['jur'];
         $wa = $data['wa'];
         $ukm = $data['ukm'];
-        $ktm = $data['ktm'];
         $sp = $data['sp'];
     }
 }
@@ -88,7 +87,16 @@ $result2 = mysqli_query($conn, $query2);
                         </div>
                         <div class="mb-3">
                             <label for="fak" class="form-label">FAKULTAS</label>
-                            <input type="text" class="form-control" id="fak" name="fak" value="<?= $fak ?>" required />
+                            <select id="fak" name="fak" class="form-select" required>
+                                <option value="" disabled selected></option>
+                                <option value="FASILKOM" <?php if ($data['fak'] == 'FASILKOM') { ?> selected <?php } ?>>FASILKOM</option>
+                                <option value="FH" <?php if ($data['fak'] == 'FH') { ?> selected <?php } ?>>FH</option>
+                                <option value="FT" <?php if ($data['fak'] == 'FT') { ?> selected <?php } ?>>FT</option>
+                                <option value="FP" <?php if ($data['fak'] == 'FP') { ?> selected <?php } ?>>FP</option>
+                                <option value="FISIP" <?php if ($data['fak'] == 'FISIP') { ?> selected <?php } ?>>FISIP</option>
+                                <option value="FEB" <?php if ($data['fak'] == 'FEB') { ?> selected <?php } ?>>FEB</option>
+                                <option value="FAD" <?php if ($data['fak'] == 'FAD') { ?> selected <?php } ?>>FAD</option>
+                            </select>
                         </div>
                         <div class="mb-3">
                             <label for="jur" class="form-label">PROGRAM STUDI</label>
@@ -115,11 +123,6 @@ $result2 = mysqli_query($conn, $query2);
                                 }
                                 ?>
                             </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="ktm" class="form-label">KTM</label>
-                            <input type="hidden" name="ktm" value="<?= $ktm ?>">
-                            <input class="form-control" type="file" id="ktm" name="ktm" accept=".pdf" value="<?= $ktm ?>" />
                         </div>
                         <div class="mb-3">
                             <img src="uploads/<?= $data['sp'] ?>" width="100px"><br>
