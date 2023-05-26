@@ -76,7 +76,7 @@ if (isset($_POST['login'])) {
         echo 'd-block'; ?>">
         <p>Username or password is incorrect!</p>
       </div>
-      <button class="btn btnlogin" type="submit" name="login">LOGIN</button>
+      <button class="btn btn-secondary btnlogin" type="submit" name="login">LOGIN</button>
     </form>
   </div>
 
