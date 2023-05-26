@@ -8,7 +8,7 @@
 nav {
   background-color: var(--pr);
   font-weight: 700;
-  border-bottom: 2px black solid;
+  border-bottom: 1px black solid;
   color: var(--alt);
 }
 
