@@ -21,7 +21,7 @@ $result = mysqli_query($conn, $query);
 <body>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#home">UKM UPNVJT</a>
+      <a class="navbar-brand">UKM UPNVJT</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -98,7 +98,8 @@ $result = mysqli_query($conn, $query);
         </tr>
       </table>
       <a href="index.php" class="btn btn-secondary">Batal</a>
-      <button class="btn btn-primary" type="submit" value="submit" name="proses">Simpan</button>
+      <button class="btn" type="submit" value="submit" name="proses" style="color: white;
+  background-color: #617a55;">Simpan</button>
     </form>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"

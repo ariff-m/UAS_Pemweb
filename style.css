@@ -22,6 +22,10 @@ nav {
   font-size: 1.5rem;
 }
 
+.navbar-brand:hover {
+  color: var(--sec);
+}
+
 .navbar-nav .nav-link {
   color: var(--sec);
 }
@@ -44,6 +48,10 @@ nav {
 
 .home .isi {
   padding-top: 3rem;
+}
+
+.container h2 {
+  color: var(--pr);
 }
 
 .home .isi h1 {
