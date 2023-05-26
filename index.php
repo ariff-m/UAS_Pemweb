@@ -100,7 +100,10 @@ $result = mysqli_query($conn, $query);
   </div>
 
   <footer>
-    <p>&copy 2023 | Kelompok 4</p>
+    <div class="container">
+      <p>Jalan Raya Rungkut Madya<br>Surabaya, 60295<br>Indonesia</p>
+      <p class="copy">Copyright &copy 2023 | All Rights Reserved | Kelompok 4</p>
+    </div>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
