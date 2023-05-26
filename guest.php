@@ -14,8 +14,7 @@ $result = mysqli_query($conn, $query);
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="guest.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
@@ -25,8 +24,7 @@ $result = mysqli_query($conn, $query);
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand">UKM UPNVJT</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
@@ -56,87 +54,74 @@ $result = mysqli_query($conn, $query);
                         <img src="src/3.jpg" class="tales d-block">
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-                    data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-                    data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
         </div>
-<<<<<<< HEAD
         <div class="isi d-flex gap-3">
             <img src="src/logo.png" width="200px">
             <div>
-                <h1>SELAMAT DATANG DI WEBSITE <br> UNIT KEGIATAN MAHASISWA UPNVJT </h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate expedita earum aliquid, iure, voluptatum est incidunt reprehenderit delectus, voluptatem veritatis fugit esse debitis a temporibus architecto tempore recusandae itaque illo doloremque. Cumque facilis aperiam nisi ea quasi quo rem earum animi at voluptas, dolorum libero, eaque ducimus eveniet praesentium sit.</p>
+                <h1>UNIT KEGIATAN MAHASISWA UPNVJT </h1>
+                <p>Unit Kegiatan Mahasiswa (UKM) adalah organisasi yang terdiri dari mahasiswa-mahasiswa di sebuah
+                    perguruan tinggi atau universitas yang memiliki minat atau hobi yang sama. UKM menyediakan platform bagi mahasiswa untuk
+                    mengembangkan diri di luar lingkup akademik dan berpartisipasi dalam kegiatan yang sesuai dengan minat
+                    dan
+                    bakat mereka.</p>
+                <p>Dengan ikut serta dalam UKM, mahasiswa memiliki kesempatan untuk memperluas relasi, mengeksplorasi
+                    minat
+                    dan bakat mereka, dan mendapatkan pengalaman yang dapat berguna dalam pengembangan karier mereka di
+                    masa depan.</p>
             </div>
-=======
-        <div class="isi">
-            <h1>SELAMAT DATANG DI WEBSITE <br> UNIT KEGIATAN MAHASISWA UPNVJT </h1>
-            <p>Unit Kegiatan Mahasiswa (UKM) adalah organisasi yang terdiri dari mahasiswa-mahasiswa di sebuah
-                perguruan tinggi atau
-                universitas yang memiliki minat atau hobi yang sama. UKM menyediakan platform bagi mahasiswa untuk
-                mengembangkan diri di luar lingkup akademik dan berpartisipasi dalam kegiatan yang sesuai dengan minat
-                dan
-                bakat mereka.</p>
-            <p>Dengan ikut serta dalam UKM, mahasiswa memiliki kesempatan untuk memperluas relasi, mengeksplorasi
-                minat
-                dan bakat mereka, dan mendapatkan pengalaman yang dapat berguna dalam pengembangan karier mereka di
-                masa depan.</p>
->>>>>>> 279bbb30a2d65bb24f7cca71436b666ee9d5a21b
         </div>
     </div>
 
-    <div class="hal2 container" id="ukm">
-        <h2>Unit Kegiatan Mahasiswa</h2>
-        <p class="p">Berikut ini adalah beberapa unit kegiatan mahasiswa yang dapat Anda ikuti:</p>
+        <div class="hal2 container" id="ukm">
+            <h2>Unit Kegiatan Mahasiswa</h2>
+            <p class="p">Berikut ini adalah beberapa unit kegiatan mahasiswa yang dapat Anda ikuti:</p>
 
-        <div class="kartu">
+            <div class="kartu">
 
-            <?php
-            if (mysqli_num_rows($result) > 0) {
-                $no = 1;
-                while ($row = mysqli_fetch_assoc($result)) {
-                    ?>
-                    <div class="card" style="width: 15rem;">
-                        <img src="uploads/<?php echo $row['img']; ?>" class="card-img-top">
-                        <div class="card-body">
-                            <h5>
-                                <?php echo $row['ukm']; ?>
-                            </h5>
-                            <p class="card-text">
-                                <?php echo $row['desk'] ?>
-                            </p>
-                            <p class="fw-semibold">Total Mahasiswa :
-                                <?php echo $row['total'] ?>
-                            </p>
-                            <a href="<?php echo $row['instagram'] ?>" class="sosmed text-decoration-none btn" target="_blank"><i
-                                    class="bi bi-instagram"></i> Instagram</a>
+                <?php
+                if (mysqli_num_rows($result) > 0) {
+                    $no = 1;
+                    while ($row = mysqli_fetch_assoc($result)) {
+                ?>
+                        <div class="card" style="width: 15rem;">
+                            <img src="uploads/<?php echo $row['img']; ?>" class="card-img-top">
+                            <div class="card-body">
+                                <h5>
+                                    <?php echo $row['ukm']; ?>
+                                </h5>
+                                <p class="card-text">
+                                    <?php echo $row['desk'] ?>
+                                </p>
+                                <p class="fw-semibold">Total Mahasiswa :
+                                    <?php echo $row['total'] ?>
+                                </p>
+                                <a href="<?php echo $row['instagram'] ?>" class="sosmed text-decoration-none btn" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
+                            </div>
                         </div>
-                    </div>
 
-                    <?php
+                <?php
+                    }
                 }
-            }
-            ?>
+                ?>
+            </div>
         </div>
 
-    </div>
-
-    <footer>
-        <div class="container">
-            <p>Jalan Raya Rungkut Madya<br>Surabaya, 60295<br>Indonesia</p>
-            <p class="copy">Copyright &copy 2023 | All Rights Reserved | Kelompok 4</p>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
+        <footer>
+            <div class="container">
+                <p>Jalan Raya Rungkut Madya<br>Surabaya, 60295<br>Indonesia</p>
+                <p class="copy">Copyright &copy 2023 | All Rights Reserved | Kelompok 4</p>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 
 </html>
