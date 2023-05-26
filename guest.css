@@ -44,12 +44,16 @@ nav {
 
 .home .isi {
   padding-top: 3rem;
+  align-items: center;
 }
 
 .home .isi h1 {
   font-weight: 700;
   color: var(--pr);
-  margin-bottom: 2rem;
+}
+
+.home .isi p {
+  width: 90%;
 }
 
 .hal2 {

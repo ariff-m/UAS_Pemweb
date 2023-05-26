@@ -67,9 +67,12 @@ $result = mysqli_query($conn, $query);
                 </button>
             </div>
         </div>
-        <div class="isi">
-            <h1>SELAMAT DATANG DI WEBSITE <br> UNIT KEGIATAN MAHASISWA UPNVJT </h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate expedita earum aliquid, iure, voluptatum est incidunt reprehenderit delectus, voluptatem veritatis fugit esse debitis a temporibus architecto tempore recusandae itaque illo doloremque. Cumque facilis aperiam nisi ea quasi quo rem earum animi at voluptas, dolorum libero, eaque ducimus eveniet praesentium sit.</p>
+        <div class="isi d-flex gap-3">
+            <img src="src/logo.png" width="200px">
+            <div>
+                <h1>SELAMAT DATANG DI WEBSITE <br> UNIT KEGIATAN MAHASISWA UPNVJT </h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate expedita earum aliquid, iure, voluptatum est incidunt reprehenderit delectus, voluptatem veritatis fugit esse debitis a temporibus architecto tempore recusandae itaque illo doloremque. Cumque facilis aperiam nisi ea quasi quo rem earum animi at voluptas, dolorum libero, eaque ducimus eveniet praesentium sit.</p>
+            </div>
         </div>
     </div>
 
