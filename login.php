@@ -72,12 +72,11 @@ if (isset($_POST['login'])) {
       <div class="mb-3">
         <input type="password" class="form-control" name="password" placeholder="password" required />
       </div>
-      <div style="display: none;"
-        class="verif text-danger fw-bold text-center <?php if (isset($error))
-          echo 'd-block'; ?>">
+      <div style="display: none;" class="verif text-danger fw-bold text-center <?php if (isset($error))
+        echo 'd-block'; ?>">
         <p>Username or password is incorrect!</p>
       </div>
-      <button class="btn btn-success" type="submit" name="login">LOGIN</button>
+      <button class="btn btnlogin" type="submit" name="login">LOGIN</button>
     </form>
   </div>
 

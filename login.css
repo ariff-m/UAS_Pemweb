@@ -51,3 +51,12 @@ nav {
 .login h3 {
   color: var(--pr);
 }
+
+.btnlogin {
+  color: var(--sec);
+  background-color: var(--pr);
+}
+
+.btnlogin :hover {
+  background-color: var(--pr);
+}
