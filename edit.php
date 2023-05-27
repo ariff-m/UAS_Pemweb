@@ -125,10 +125,10 @@ $result2 = mysqli_query($conn, $query2);
                             </select>
                         </div>
                         <div class="mb-3">
-                            <img src="uploads/<?= $data['sp'] ?>" width="100px"><br>
+                            <img src="uploads/<?= $sp ?>" width="100px"><br>
                             <label for="sp" class="form-label">FOTO</label>
                             <input type="hidden" name="sp" value="<?= $sp ?>">
-                            <input class="form-control" type="file" id="sp" name="sp" accept=".img, .jpeg, .png ,.jpg" required />
+                            <input class="form-control" type="file" id="sp" name="sp" accept=".img, .jpeg, .png ,.jpg"/>
                         </div>
                     </td>
                 </tr>
