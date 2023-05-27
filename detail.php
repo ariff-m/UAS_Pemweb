@@ -49,10 +49,10 @@ if (isset($_GET['id'])) {
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" aria-current="page" href="index.php">Home</a>
-                    <a class="nav-link" href="data.php">Data</a>
+                    <a class="nav-link" aria-current="page" href="index.php">Data UKM</a>
+                    <a class="nav-link" href="data.php">Data Mahasiswa</a>
                     <div class="dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Form</a>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Formulir</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="form.php">Tambah Mahasiswa</a></li>
                             <li><a class="dropdown-item" href="form2.php">Tambah UKM</a></li>
@@ -66,6 +66,7 @@ if (isset($_GET['id'])) {
         </div>
     </nav>
 
+
     <div class="detail container">
         <table class="table table-striped border">
             <tr>
@@ -73,7 +74,7 @@ if (isset($_GET['id'])) {
             </tr>
             <tr>
                 <td>
-                    <img src="uploads/<?= $sp ?>" width="200px">
+                    <img src="uploads/<?= $sp ?>" width="200px" alt="fotomuka">
                 </td>
                 <td style="width:80%;">
                     <p>Nama : <?= $nama ?></p>

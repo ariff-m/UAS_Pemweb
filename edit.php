@@ -128,13 +128,13 @@ $result2 = mysqli_query($conn, $query2);
                             <img src="uploads/<?= $data['sp'] ?>" width="100px"><br>
                             <label for="sp" class="form-label">FOTO</label>
                             <input type="hidden" name="sp" value="<?= $sp ?>">
-                            <input class="form-control" type="file" id="sp" name="sp" accept=".pdf" value="<?= $sp ?>" />
+                            <input class="form-control" type="file" id="sp" name="sp" accept=".img, .jpeg, .png ,.jpg" required />
                         </div>
                     </td>
                 </tr>
             </table>
-            <a href="index.php" class="btn btn-secondary">CENCEL</a>
-            <button class="btn btn-success" type="submit" value="update" name="proses">UPDATE</button>
+            <a href="index.php" class="btn btn-secondary">Batal</a>
+            <button class="btn text-light" type="submit" value="update" name="proses" style="background-color: var(--pr);">Perbarui</button>
         </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
