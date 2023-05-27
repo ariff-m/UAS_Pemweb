@@ -39,8 +39,8 @@ nav {
 
 .data h2 {
   text-align: center;
+  color: var(--pr);
 }
-
 
 footer {
   border-top: 1px black solid;
@@ -56,13 +56,11 @@ footer .copy {
   justify-content: center;
 }
 
-
 /* Tablet */
 @media screen and (max-width: 768px) {
   html {
     font-size: 80%;
   }
-
 }
 
 /* mobile */
