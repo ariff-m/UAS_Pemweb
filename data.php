@@ -100,7 +100,7 @@ $result = mysqli_query($conn, $query);
                             <td>
                                 <a type="button" class="btn btn-dark" href="detail.php?id=<?= $row['id'] ?>">DETAIL</a> |
                                 <a type="button" class="btn btn-warning" href="edit.php?id=<?= $row['id'] ?>">EDIT</a> |
-                                <a type="button" class="btn btn-danger" href="functions.php?id=<?= $row['id'] ?> &proses=remove">REMOVE</a>
+                                <a type="button" class="btn btn-danger" href="functions.php?id=<?= $row['id'] ?> &proses=remove" onclick="return confirm('Apakah kamu yakin menghapus data NPM : <?= $row['npm']; ?> ?');">REMOVE</a>
                             </td>
                         </tr>
                 <?php
