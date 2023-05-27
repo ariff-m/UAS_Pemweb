@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2023 at 06:39 AM
+-- Generation Time: May 27, 2023 at 06:37 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -69,11 +69,11 @@ CREATE TABLE `mahasiswa` (
 --
 
 INSERT INTO `mahasiswa` (`id`, `nama`, `jk`, `npm`, `fak`, `jur`, `wa`, `ukm`, `ktm`, `sp`) VALUES
-(7, 'Volem Alvaro Azira', 'Laki - laki', '21081010003', 'FASILKOM', 'Informatika', '+62 85156727386', 'Futsal', '646f27fd3a222.png', '646f27fd3a596.jpeg'),
-(8, 'M. Arif', 'Laki - laki', '21081012319', 'FASILKOM', 'Teknik Informatika', '+62 817371738', 'Bola Basket', '64702ec96b3af.png', '64702ec96b79c.png'),
-(10, 'Kesya', 'Perempuan', '210810100', 'FT', 'Teknik', '+62 ', 'Bola Basket', '6470305ab818b.jpeg', '6470305ab8469.png'),
-(11, 'Anya Ningrum', 'Perempuan', '2108101', 'FASILKOM', 'Teknik Informatika', '+62 ', 'Futsal', '647033cce6042.png', '647033cce6507.png'),
-(12, 'Gilang Enggar', 'Laki - laki', '21081010', 'FASILKOM', 'Teknik', '+62 ', 'Bola Voli', '', '647037d0b0415.png');
+(7, 'Volem Alvaro Azira', 'Laki - laki', '21081010003', 'FASILKOM', 'Informatika', '+62 85156727386', 'Futsal', '646f27fd3a222.png', '64717da2836ae.png'),
+(8, 'M. Arif', 'Laki - laki', '21081012319', 'FASILKOM', 'Teknik Informatika', '+62 817371738', 'Bola Basket', '64702ec96b3af.png', '647187e40b0c8.png'),
+(10, 'Kesya', 'Perempuan', '210810100', 'FT', 'Teknik', '+62 ', 'Bola Basket', '6470305ab818b.jpeg', '647187ee4c2a4.png'),
+(11, 'Anya Ningrum', 'Perempuan', '2108101', 'FASILKOM', 'Teknik Informatika', '+62 ', 'Futsal', '647033cce6042.png', '647187f897250.png'),
+(12, 'Gilang Enggar', 'Laki - laki', '21081010', 'FASILKOM', 'Teknik', '+62 ', 'Bola Voli', '', '647188000ea26.png');
 
 --
 -- Triggers `mahasiswa`
