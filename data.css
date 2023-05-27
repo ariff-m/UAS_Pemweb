@@ -55,3 +55,19 @@ footer .copy {
   display: flex;
   justify-content: center;
 }
+
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 80%;
+  }
+
+}
+
+/* mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 75%;
+  }
+}

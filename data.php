@@ -60,55 +60,57 @@ $result = mysqli_query($conn, $query);
             DATA MAHASISWA YANG MENGIKUTI UKM<br />
             UPN "VETERAN" JAWA TIMUR
         </h2>
-        <table class="table mt-2 text-center border" id="data-table">
-            <thead class="table-dark">
-                <tr>
-                    <th>No.</th>
-                    <th>NPM</th>
-                    <th>NAMA</th>
-                    <th>JURUSAN</th>
-                    <th>GENDER</th>
-                    <th>UKM</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                if (mysqli_num_rows($result) > 0) {
-                    $no = 1;
-                    while ($row = mysqli_fetch_assoc($result)) {
-                ?>
-                        <tr>
-                            <td>
-                                <?php echo $no++; ?>
-                            </td>
-                            <td>
-                                <?php echo $row['npm']; ?>
-                            </td>
-                            <td>
-                                <?php echo $row['nama']; ?>
-                            </td>
-                            <td>
-                                <?php echo $row['jur']; ?>
-                            </td>
-                            <td>
-                                <?php echo $row['jk']; ?>
-                            </td>
-                            <td>
-                                <?php echo $row['ukm']; ?>
-                            </td>
-                            <td>
-                                <a type="button" class="btn btn-dark" href="detail.php?id=<?= $row['id'] ?>">DETAIL</a> |
-                                <a type="button" class="btn btn-warning" href="edit.php?id=<?= $row['id'] ?>">EDIT</a> |
-                                <a type="button" class="btn btn-danger" href="functions.php?id=<?= $row['id'] ?> &proses=remove" onclick="return confirm('Apakah kamu yakin menghapus data NPM : <?= $row['npm']; ?> ?');">REMOVE</a>
-                            </td>
-                        </tr>
-                <?php
+        <div class="table-responsive">
+            <table class="table mt-2 text-center border" id="data-table">
+                <thead class="table-dark">
+                    <tr>
+                        <th>No.</th>
+                        <th>NPM</th>
+                        <th>NAMA</th>
+                        <th>JURUSAN</th>
+                        <th>GENDER</th>
+                        <th>UKM</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    if (mysqli_num_rows($result) > 0) {
+                        $no = 1;
+                        while ($row = mysqli_fetch_assoc($result)) {
+                    ?>
+                            <tr>
+                                <td>
+                                    <?php echo $no++; ?>
+                                </td>
+                                <td>
+                                    <?php echo $row['npm']; ?>
+                                </td>
+                                <td>
+                                    <?php echo $row['nama']; ?>
+                                </td>
+                                <td>
+                                    <?php echo $row['jur']; ?>
+                                </td>
+                                <td>
+                                    <?php echo $row['jk']; ?>
+                                </td>
+                                <td>
+                                    <?php echo $row['ukm']; ?>
+                                </td>
+                                <td style="width: 25%;">
+                                    <a type="button" class="btn btn-dark" href="detail.php?id=<?= $row['id'] ?>">DETAIL</a> |
+                                    <a type="button" class="btn btn-warning" href="edit.php?id=<?= $row['id'] ?>">EDIT</a> |
+                                    <a type="button" class="btn btn-danger" href="functions.php?id=<?= $row['id'] ?> &proses=remove" onclick="return confirm('Apakah kamu yakin menghapus data NPM : <?= $row['npm']; ?> ?');">REMOVE</a>
+                                </td>
+                            </tr>
+                    <?php
+                        }
                     }
-                }
-                ?>
-            </tbody>
-        </table>
+                    ?>
+                </tbody>
+            </table>
+        </div>
 
     </div>
 

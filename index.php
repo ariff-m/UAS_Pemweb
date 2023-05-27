@@ -65,7 +65,7 @@ $result = mysqli_query($conn, $query);
         $no = 1;
         while ($row = mysqli_fetch_assoc($result)) {
       ?>
-          <div class="card" style="width: 15rem;">
+          <div class="card">
             <img src="uploads/<?php echo $row['img']; ?>" class="card-img-top" alt="...">
             <div class="card-body">
               <h5>

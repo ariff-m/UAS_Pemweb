@@ -91,6 +91,7 @@ nav {
 
 .hal2 .kartu .card {
   box-shadow: rgb(0, 0, 0, 30%) 1px 1px 3px;
+  width: 15rem;
 }
 
 .hal2 .kartu .card .card-body {
@@ -136,4 +137,28 @@ footer {
 footer .copy {
   display: flex;
   justify-content: center;
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 80%;
+  }
+
+}
+
+/* mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 75%;
+  }
+
+  .home .isi {
+    flex-direction: column;
+  }
+
+  .hal2 .kartu .card {
+    width: 70%;
+  }
+
 }
