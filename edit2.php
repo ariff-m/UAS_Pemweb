@@ -47,7 +47,7 @@ if (isset($_GET['id'])) {
     </nav>
 
     <div class="form mt-3 container">
-        <h2>Masukkan Data UKM</h2>
+        <h2>Memperbarui Data UKM</h2>
         <form action="functions.php" method="post" class="mt-3" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?= $id ?>">
             <table class="table">
@@ -55,20 +55,20 @@ if (isset($_GET['id'])) {
                     <td>
                         <div class="mb-3">
                             <label for="nama" class="form-label">NAMA UKM</label>
-                            <input type="text" class="form-control" id="ukm" name="ukm" value="<?= $data['ukm'] ?>" required />
+                            <input type="text" class="form-control" id="ukm" name="ukm" value="<?= $ukm ?>" required />
                         </div>
                         <div class="mb-3">
                             <label for="npm" class="form-label">DESKRIPSI</label>
-                            <textarea class="form-control" name="desk" id="desk" rows="5"><?= $data['desk'] ?></textarea>
+                            <textarea class="form-control" name="desk" id="desk" rows="5"><?= $desk ?></textarea>
                         </div>
                     </td>
                     <td>
                         <div class="mb-3">
                             <label for="nama" class="form-label">Link Instagram</label>
-                            <input type="text" class="form-control" id="instagram" name="instagram" value="<?= $data['instagram'] ?>" required />
+                            <input type="text" class="form-control" id="instagram" name="instagram" value="<?= $instagram ?>" required />
                         </div>
                         <div class="mb-3">
-                            <img src="uploads/<?= $data['img'] ?>" width="150px"><br>
+                            <img src="uploads/<?= $img ?>" width="150px"><br>
                             <label for="img" class="form-label">Logo UKM</label>
                             <input type="hidden" name="img" id="img" value="<?= $data['img'] ?>">
                             <input class="form-control" type="file" id="img" name="img" accept=".img, .jpeg, .png ,.jpg" />

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 27, 2023 at 06:37 AM
+-- Generation Time: Jun 07, 2023 at 02:42 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -41,9 +41,10 @@ CREATE TABLE `kartu` (
 --
 
 INSERT INTO `kartu` (`id`, `img`, `ukm`, `desk`, `instagram`, `total`) VALUES
-(5, '646f26733d9d8.png', 'Bola Voli', 'Jadwal Latihan Rutin: Senin 16.00 - 20.00 CP Sparing/Kerjasama  📲 0878-5316-0824 (Humas) CP Oprec : 📲 0812-4901-3915 (Zahra) 📲 0888-3880-004 (Yahya)', 'https://www.instagram.com/ukmvoliupnjatim/', 1),
-(7, '646f48a8e4f1c.png', 'Bola Basket', '[SELAMAT DATANG MAHASISWA BARU JALUR SNPB 2023]\r\n\r\nPengumuman SNBP hari ini lohh, gimana hasilnya? aman? buat teman-teman yang diterima di Univ pilihannya selamat yaa, buat yang belum masih ada utbk dan jalur lainnya!\r\nsemangat terusss!!!', 'https://www.instagram.com/upnvjt_basketball/', 2),
-(8, '647032ba187b4.png', 'Futsal', 'Latihan Rutin👇🏻\r\n🗓️ : Jumat\r\n🕕 : 18.00 - Selesai\r\n📍 : Giri Loka UPNV Jatim', 'https://www.instagram.com/futsal_upnvjatim/', 2);
+(5, '646f26733d9d8.png', 'Bola Voli', 'Jadwal Latihan Rutin: Senin 16.00 - 20.00 CP Sparing/Kerjasama  📲 0878-5316-0824 (Humas) CP Oprec : 📲 0812-4901-3915 (Zahra) 📲 0888-3880-004 (Yahya)', 'https://www.instagram.com/ukmvoliupnjatim/', 2),
+(7, '646f48a8e4f1c.png', 'Bola Basket', '[SELAMAT DATANG MAHASISWA BARU JALUR SNPB 2023]\r\n\r\nPengumuman SNBP hari ini lohh, gimana hasilnya? aman? buat teman-teman yang diterima di Univ pilihannya selamat yaa, buat yang belum masih ada utbk dan jalur lainnya!\r\nsemangat terusss!!!', 'https://www.instagram.com/upnvjt_basketball/', 1),
+(8, '647032ba187b4.png', 'Futsal', 'Latihan Rutin👇🏻\r\n🗓️ : Jumat\r\n🕕 : 18.00 - Selesai\r\n📍 : Giri Loka UPNV Jatim', 'https://www.instagram.com/futsal_upnvjatim/', 1),
+(9, '647edb550cfaf.png', 'Tari', 'UPN \"Veteran\" Jawa Timur\r\n🏠 Gedung Serba Guna Giri Loka Sayap Timur Lt. 2\r\nContact Person : line📲 @532fmpfz\r\n⬇️⬇️⬇️\r\nlinktr.ee/ukmtariupnjatim', 'https://www.instagram.com/ukmtari_upnjatim/', 1);
 
 -- --------------------------------------------------------
 
@@ -60,7 +61,6 @@ CREATE TABLE `mahasiswa` (
   `jur` varchar(30) NOT NULL,
   `wa` varchar(30) NOT NULL,
   `ukm` varchar(50) NOT NULL,
-  `ktm` text NOT NULL,
   `sp` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -68,12 +68,12 @@ CREATE TABLE `mahasiswa` (
 -- Dumping data for table `mahasiswa`
 --
 
-INSERT INTO `mahasiswa` (`id`, `nama`, `jk`, `npm`, `fak`, `jur`, `wa`, `ukm`, `ktm`, `sp`) VALUES
-(7, 'Volem Alvaro Azira', 'Laki - laki', '21081010003', 'FASILKOM', 'Informatika', '+62 85156727386', 'Futsal', '646f27fd3a222.png', '64717da2836ae.png'),
-(8, 'M. Arif', 'Laki - laki', '21081012319', 'FASILKOM', 'Teknik Informatika', '+62 817371738', 'Bola Basket', '64702ec96b3af.png', '647187e40b0c8.png'),
-(10, 'Kesya', 'Perempuan', '210810100', 'FT', 'Teknik', '+62 ', 'Bola Basket', '6470305ab818b.jpeg', '647187ee4c2a4.png'),
-(11, 'Anya Ningrum', 'Perempuan', '2108101', 'FASILKOM', 'Teknik Informatika', '+62 ', 'Futsal', '647033cce6042.png', '647187f897250.png'),
-(12, 'Gilang Enggar', 'Laki - laki', '21081010', 'FASILKOM', 'Teknik', '+62 ', 'Bola Voli', '', '647188000ea26.png');
+INSERT INTO `mahasiswa` (`id`, `nama`, `jk`, `npm`, `fak`, `jur`, `wa`, `ukm`, `sp`) VALUES
+(7, 'Volem Alvaro Azira', 'Laki - laki', '21081010003', 'FASILKOM', 'Teknik Informatika', '+62 85156727386', 'Bola Voli', '64717da2836ae.png'),
+(8, 'M. Arif', 'Laki - laki', '21081010199', 'FASILKOM', 'Teknik Informatika', '+62 817371738', 'Futsal', '647187e40b0c8.png'),
+(10, 'Kesya Nursyahada', 'Perempuan', '21081010120', 'FASILKOM', 'Teknik Informatika', '+62 888', 'Bola Basket', '647187ee4c2a4.png'),
+(11, 'Anya Ningrum Nurafifah', 'Perempuan', '21081010112', 'FASILKOM', 'Teknik Informatika', '+62 ', 'Tari', '647187f897250.png'),
+(12, 'Gilang Enggar Saputra', 'Laki - laki', '21081010237', 'FASILKOM', 'Teknik Informatika', '+62 ', 'Bola Voli', '647188000ea26.png');
 
 --
 -- Triggers `mahasiswa`
@@ -152,13 +152,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `kartu`
 --
 ALTER TABLE `kartu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `user`

@@ -87,7 +87,7 @@ if (isset($_POST['login'])) {
       </div>
       <div class="form-group mb-3">
         <div class="input-group">
-          <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Password" required />
           <div class="input-group-append">
             <span class="input-group-text password-toggle" onclick="togglePassword()">
               <i class="bi bi-eye-slash-fill"></i>

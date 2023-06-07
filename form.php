@@ -25,7 +25,7 @@ $result = mysqli_query($conn, $query);
     </div>
   </nav>
 
-  <div class="form mt-3 container">
+  <div class="form mt-3 container border">
     <h2>Masukkan Data Anda</h2>
     <form action="functions.php" method="post" class="mt-3" enctype="multipart/form-data">
       <table class="table">
@@ -68,7 +68,7 @@ $result = mysqli_query($conn, $query);
           <td>
             <div class="mb-3">
               <label for="wa" class="form-label">Nomor Whatsapp</label>
-              <input type="text" class="form-control" id="wa" name="wa" value="+62" required />
+              <input type="text" class="form-control" id="wa" name="wa" value="+62 " required />
             </div>
             <div class="mb-3">
               <label for="ukm" class="form-label">Pilihan UKM</label>
@@ -94,8 +94,7 @@ $result = mysqli_query($conn, $query);
         </tr>
       </table>
       <a href="index.php" class="btn btn-secondary">Batal</a>
-      <button class="btn" type="submit" value="submit" name="proses" style="color: white;
-  background-color: #617a55;">Simpan</button>
+      <button class="btn" type="submit" value="submit" name="proses" style="color: white; background-color: #617a55;">Simpan</button>
     </form>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"

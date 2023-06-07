@@ -69,16 +69,16 @@ function tambah()
     $sp_tmp = $_FILES['sp'];
 
 
-    // Menentukan nama file PDF yang baru
+    // Menentukan nama file img yang baru
     $sp = uniqid() . '.' . pathinfo($sp_tmp['name'], PATHINFO_EXTENSION);
 
-    // Memindahkan $sp_tmp PDF yang diunggah ke direktori yang ditentukan
+    // Memindahkan $sp_tmp img yang diunggah ke direktori yang ditentukan
     if ($sp_tmp['error'] == 4) {
         $sp = "null";
     } else {
         if (!move_uploaded_file($sp_tmp['tmp_name'], 'uploads/' . $sp)) {
             echo "<script>
-            alert('File Surat Pendaftaran tidak bisa di masukkan.');
+            alert('Foto tidak bisa di masukkan.');
         </script>";
             return 0;
         }

@@ -43,6 +43,7 @@ $result = mysqli_query($conn, $query);
     </nav>
 
     <div class="home container" id="home">
+        <!-- Banner -->
         <div class="banner">
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -68,6 +69,8 @@ $result = mysqli_query($conn, $query);
                 </button>
             </div>
         </div>
+        <!-- /bammer -->
+        <!-- Konten -->
         <div class="isi d-flex gap-3">
             <img src="src/logo.png" width="200px">
             <div>
@@ -85,6 +88,7 @@ $result = mysqli_query($conn, $query);
                     masa depan.</p>
             </div>
         </div>
+        <!-- /konten -->
     </div>
 
     <div class="hal2 container" id="ukm">
@@ -94,10 +98,12 @@ $result = mysqli_query($conn, $query);
         <div class="kartu">
 
             <?php
+
             if (mysqli_num_rows($result) > 0) {
                 $no = 1;
                 while ($row = mysqli_fetch_assoc($result)) {
                     ?>
+                    
                     <div class="card">
                         <img src="uploads/<?php echo $row['img']; ?>" class="card-img-top">
                         <div class="card-body">
@@ -110,8 +116,8 @@ $result = mysqli_query($conn, $query);
                             <p class="fw-semibold">Total Mahasiswa :
                                 <?php echo $row['total'] ?>
                             </p>
-                            <a href="<?php echo $row['instagram'] ?>" class="sosmed text-decoration-none btn" target="_blank"><i
-                                    class="bi bi-instagram"></i> Instagram</a>
+                            <a href="<?php echo $row['instagram'] ?>" class="sosmed text-decoration-none btn" target="_blank">
+                                <i class="bi bi-instagram"></i> Instagram</a>
                         </div>
                     </div>
 
@@ -119,6 +125,7 @@ $result = mysqli_query($conn, $query);
                 }
             }
             ?>
+
         </div>
     </div>
 
@@ -128,6 +135,7 @@ $result = mysqli_query($conn, $query);
             <p class="copy">Copyright &copy 2023 | All Rights Reserved | Kelompok 4</p>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
