@@ -65,6 +65,7 @@ function tambah()
     $jur = $_POST['jur'];
     $wa = $_POST['wa'];
     $ukm = $_POST['ukm'];
+    $tgl = date("Y-m-d");
 
     $sp_tmp = $_FILES['sp'];
 
@@ -86,7 +87,7 @@ function tambah()
 
 
 
-    $query = "INSERT INTO mahasiswa (nama, jk, npm, fak, jur, wa, ukm, sp) VALUES ('$nama', '$jk', '$npm', '$fak','$jur','$wa','$ukm','$sp')";
+    $query = "INSERT INTO mahasiswa (nama, jk, npm, fak, jur, wa, ukm, sp, tgl) VALUES ('$nama', '$jk', '$npm', '$fak','$jur','$wa','$ukm','$sp','$tgl');";
     $eksekusi = mysqli_query($conn, $query);
 
     if ($eksekusi) {

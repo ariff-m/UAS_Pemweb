@@ -73,6 +73,7 @@ $result = mysqli_query($conn, $query);
                         <th>JURUSAN</th>
                         <th>GENDER</th>
                         <th>UKM</th>
+                        <th>TANGGAL MASUK</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -100,6 +101,9 @@ $result = mysqli_query($conn, $query);
                                 </td>
                                 <td>
                                     <?php echo $row['ukm']; ?>
+                                </td>
+                                <td>
+                                    <?php echo $row['tgl']; ?>
                                 </td>
                                 <td style="width: 25%;">
                                     <a type="button" class="btn btn-dark" href="detail.php?id=<?= $row['id'] ?>">DETAIL</a> |
