@@ -45,7 +45,7 @@ $result = mysqli_query($conn, $query);
             </div>
             <div class="mb-3">
               <label for="npm" class="form-label">NPM</label>
-              <input type="text" class="form-control" id="npm" name="npm" required />
+              <input type="" class="form-control" id="npm" name="npm" required />
             </div>
             <div class="mb-3">
               <label for="fak" class="form-label">Fakultas</label>

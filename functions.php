@@ -65,7 +65,7 @@ function tambah()
     $jur = $_POST['jur'];
     $wa = $_POST['wa'];
     $ukm = $_POST['ukm'];
-    $tgl = date("Y-m-d");
+    $tgl = date("d-m-Y");
 
     $sp_tmp = $_FILES['sp'];
 
